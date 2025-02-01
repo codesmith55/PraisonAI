@@ -840,7 +840,7 @@ class Memory:
             from ..main import client
             
             response = client.chat.completions.create(
-                model=llm or "gpt-4o",
+                model=llm or "deepseek-r1",
                 messages=[{
                     "role": "user", 
                     "content": custom_prompt or default_prompt

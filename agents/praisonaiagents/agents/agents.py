@@ -79,7 +79,7 @@ class PraisonAIAgents:
         self.process = process
         
         # Check for manager_llm in environment variable if not provided
-        self.manager_llm = manager_llm or os.getenv('OPENAI_MODEL_NAME', 'gpt-4o')
+        self.manager_llm = manager_llm or os.getenv('OPENAI_MODEL_NAME', 'deepseek-r1')
         
         # Set logger level based on verbose
         if verbose >= 5:

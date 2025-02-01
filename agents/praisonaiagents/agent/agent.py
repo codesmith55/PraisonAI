@@ -429,7 +429,7 @@ class Agent:
                 ) from e
         # Otherwise, fall back to OpenAI environment/name
         else:
-            self.llm = llm or os.getenv('OPENAI_MODEL_NAME', 'gpt-4o')
+            self.llm = llm or os.getenv('OPENAI_MODEL_NAME', 'deepseek-r1')
         self.tools = tools if tools else []  # Store original tools
         self.function_calling_llm = function_calling_llm
         self.max_iter = max_iter
@@ -455,7 +455,7 @@ class Agent:
         self.max_reflect = max_reflect
         self.min_reflect = min_reflect
         # Use the same model selection logic for reflect_llm
-        self.reflect_llm = reflect_llm or os.getenv('OPENAI_MODEL_NAME', 'gpt-4o')
+        self.reflect_llm = reflect_llm or os.getenv('OPENAI_MODEL_NAME', 'deepseek-r1')
         self.console = Console()  # Create a single console instance for the agent
         
         # Initialize system prompt
